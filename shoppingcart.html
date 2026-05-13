@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Suranna&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
@@ -12,69 +12,182 @@
     <header class="navbar">
         <nav class="logo">
             <a href="index.html" aria-label="Go to homepage">
-              <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
+                <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
             </a>
         </nav>
-      
+
         <nav class="icons">
-          <button id="search-icon" class="search-btn" type="button" aria-label="Open search">
-            <img src="icon/symbol--search.svg" alt="Search">
-          </button>
-        
-          <div id="search-panel" class="search-panel" aria-hidden="true">
-            <div class="search-top">
-                <input id="search-input" type="text" placeholder="Search" class="search-input" aria-label="Search">
+            <button id="search-icon" class="search-btn" type="button" aria-label="Open search">
+                <img src="icon/symbol--search.svg" alt="Search">
+            </button>
 
-                <button id="search-submit" class="panel-icon-btn" type="button" aria-label="Search products">
-                    <img src="icon/symbol--search.svg" alt="">
-                </button>
+            <div id="search-panel" class="search-panel" aria-hidden="true">
+                <div class="search-top">
+                    <input id="search-input" type="text" placeholder="Search" class="search-input" aria-label="Search">
 
-                <button id="close-search" class="close-btn panel-icon-btn" type="button" aria-label="Close search">
-                    <img src="icon/icon--close.svg" alt="">
-                </button>
-            </div>
+                    <button id="search-submit" class="panel-icon-btn" type="button" aria-label="Search products">
+                        <img src="icon/symbol--search.svg" alt="">
+                    </button>
 
-            <div id="search-results" class="search-results" hidden>
-                <div class="search-results__section">
-                    <h2>Suggestions</h2>
-                    <div id="suggestions-list" class="suggestions-list"></div>
+                    <button id="close-search" class="close-btn panel-icon-btn" type="button" aria-label="Close search">
+                        <img src="icon/icon--close.svg" alt="">
+                    </button>
                 </div>
 
-                <div class="search-results__section">
-                    <h2>Products</h2>
+                <div id="search-results" class="search-results" hidden>
+                    <div class="search-results__section">
+                        <h2>Suggestions</h2>
+                        <div id="suggestions-list" class="suggestions-list"></div>
+                    </div>
 
-                    <article class="product-card">
-                        <a class="product-card__image-link" href="product-pandan.html" aria-label="View Coconut Pandan Basque Cheesecake product page">
-                            <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
-                        </a>
-                        <div class="product-card__content">
-                            <h3>Coconut Pandan Basque Cheesecake</h3>
-                            <p>$14.90 AUD - $119.90 AUD</p>
-                            <button type="button">Add to cart</button>
-                        </div>
-                    </article>
+                    <div class="search-results__section">
+                        <h2>Products</h2>
 
-                    <article class="product-card">
-                        <a class="product-card__image-link" href="product-matcha.html" aria-label="View Premium Matcha Raspberry Basque Cheesecake product page">
-                            <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
-                        </a>
-                        <div class="product-card__content">
-                            <h3>Premium Matcha Raspberry Basque Cheesecake</h3>
-                            <p>$16.90 AUD - $149.90 AUD</p>
-                            <button type="button">Add to cart</button>
-                        </div>
-                    </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-pandan.html" aria-label="View Coconut Pandan Basque Cheesecake product page">
+                                <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Coconut Pandan Basque Cheesecake</h3>
+                                <p>$14.90 AUD - $119.90 AUD</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-matcha.html" aria-label="View Premium Matcha Raspberry Basque Cheesecake product page">
+                                <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Premium Matcha Raspberry Basque Cheesecake</h3>
+                                <p>$16.90 AUD - $149.90 AUD</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-          </div>
-          <button class="cart-btn" type="button" aria-label="Open cart">
-              <img src="icon/symbol--cart.svg" alt="Cart">
-              <span class="cart-count" aria-hidden="true">0</span>
-          </button>
-      
-          <button type="button" aria-label="Open menu">
-              <img src="icon/symbol--burger.svg" alt="Menu">
-          </button>
-      </nav>
+
+            <button class="cart-btn" type="button" aria-label="Open cart">
+                <img src="icon/symbol--cart.svg" alt="Cart">
+                <span class="cart-count" aria-hidden="true">0</span>
+            </button>
+
+            <button type="button" aria-label="Open menu">
+                <img src="icon/symbol--burger.svg" alt="Menu">
+            </button>
+        </nav>
     </header>
+
+    <main class="inner-page__content cart-page" data-cart-page>
+        <section class="cart-page__filled" data-cart-filled>
+            <div class="cart-steps" aria-label="Checkout progress">
+                <div class="cart-steps__labels">
+                    <span>Shopping cart</span>
+                    <span>Check out</span>
+                    <span>Complete</span>
+                </div>
+
+                <div class="cart-steps__track">
+                    <span class="cart-steps__line"></span>
+                    <span class="cart-steps__circle is-active">1</span>
+                    <span class="cart-steps__circle">2</span>
+                    <span class="cart-steps__circle">3</span>
+                </div>
+            </div>
+
+            <div class="cart-table__head" aria-hidden="true">
+                <span>Product</span>
+                <span>Quantity</span>
+                <span>Subtotal</span>
+            </div>
+
+            <div class="cart-items" data-cart-items></div>
+
+            <a class="cart-page__continue" href="results.html">&larr; Continue shopping</a>
+
+            <section class="cart-summary">
+                <div class="cart-summary__total-row">
+                    <span>Total</span>
+                    <strong data-cart-total>A$0.00</strong>
+                </div>
+                <p class="cart-summary__note">Tax included. Delivery calculated at check out.</p>
+                <textarea class="cart-summary__instructions" rows="2" placeholder="Special instructions for the seller"></textarea>
+                <a class="cart-summary__checkout" href="checkout.html">Check out</a>
+            </section>
+        </section>
+
+        <section class="cart-page__empty" data-cart-empty hidden>
+            <div class="cart-steps" aria-label="Checkout progress">
+                <div class="cart-steps__labels">
+                    <span>Shopping cart</span>
+                    <span>Check out</span>
+                    <span>Complete</span>
+                </div>
+
+                <div class="cart-steps__track">
+                    <span class="cart-steps__line"></span>
+                    <span class="cart-steps__circle is-active">1</span>
+                    <span class="cart-steps__circle">2</span>
+                    <span class="cart-steps__circle">3</span>
+                </div>
+            </div>
+
+            <div class="cart-empty">
+                <h1 class="cart-empty__title">Your cart is empty</h1>
+                <a class="cart-page__continue cart-page__continue--center" href="results.html">&larr; Continue shopping</a>
+            </div>
+
+            <section class="cart-empty__info">
+                <h2>Special notes</h2>
+                <p>
+                    Please let us know which decorations you'd like for each cake, especially if you're purchasing multiple cakes.
+                    Please kindly pre-order your cake at least 48 hours ahead to make sure we bake it to perfection.
+                    Relax, all our ingredients are halal-certified, ensuring peace of mind with every bite.
+                </p>
+                <p>
+                    Once a cake has been picked up from our store, Lovey Patisserie Cafe cannot accept responsibility for any damage or spoilage that may occur during transport, storage or handling.
+                    Please note that our cakes are made with fresh cream and will naturally melt if kept in a hot environment or exposed to air for over an hour.
+                    Please handle with care and store as instructed to enjoy at their best.
+                </p>
+            </section>
+
+            <section class="cart-empty__info">
+                <h2>Delivery Policy</h2>
+                <p>
+                    Delivery availability, timing, and cake handling conditions will be confirmed during checkout.
+                    Orders remain subject to scheduling and store capacity.
+                </p>
+            </section>
+        </section>
+    </main>
+
+    <template id="cart-item-template">
+        <article class="cart-item" data-cart-item>
+            <div class="cart-item__product">
+                <img class="cart-item__image" src="" alt="" data-cart-item-image>
+
+                <div class="cart-item__details">
+                    <h2 data-cart-item-name></h2>
+                    <p class="cart-item__price" data-cart-item-price></p>
+                    <p class="cart-item__size" data-cart-item-size></p>
+                </div>
+            </div>
+
+            <div class="cart-item__actions">
+                <div class="cart-item__quantity" aria-label="Quantity">
+                    <button type="button" disabled>-</button>
+                    <span>1</span>
+                    <button type="button" disabled>+</button>
+                </div>
+
+                <button class="cart-item__delete" type="button" data-cart-delete aria-label="Delete product">
+                    <img src="icon/icon--remove.svg" alt="">
+                </button>
+            </div>
+
+            <p class="cart-item__subtotal" data-cart-item-subtotal></p>
+        </article>
+    </template>
 </body>
+</html>
