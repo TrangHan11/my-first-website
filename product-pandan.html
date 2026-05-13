@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Results</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coconut Pandan Basque Cheesecake</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Suranna&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
@@ -12,68 +12,171 @@
     <header class="navbar">
         <nav class="logo">
             <a href="index.html" aria-label="Go to homepage">
-              <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
+                <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
             </a>
         </nav>
-      
+
         <nav class="icons">
-          <button id="search-icon" class="search-btn" type="button" aria-label="Open search">
-            <img src="icon/symbol--search.svg" alt="Search">
-          </button>
-        
-          <div id="search-panel" class="search-panel" aria-hidden="true">
-            <div class="search-top">
-                <input id="search-input" type="text" placeholder="Search" class="search-input" aria-label="Search">
+            <button id="search-icon" class="search-btn" type="button" aria-label="Open search">
+                <img src="icon/symbol--search.svg" alt="Search">
+            </button>
 
-                <button id="search-submit" class="panel-icon-btn" type="button" aria-label="Search products">
-                    <img src="icon/symbol--search.svg" alt="">
-                </button>
+            <div id="search-panel" class="search-panel" aria-hidden="true">
+                <div class="search-top">
+                    <input id="search-input" type="text" placeholder="Search" class="search-input" aria-label="Search">
 
-                <button id="close-search" class="close-btn panel-icon-btn" type="button" aria-label="Close search">
-                    <img src="icon/icon--close.svg" alt="">
-                </button>
-            </div>
+                    <button id="search-submit" class="panel-icon-btn" type="button" aria-label="Search products">
+                        <img src="icon/symbol--search.svg" alt="">
+                    </button>
 
-            <div id="search-results" class="search-results" hidden>
-                <div class="search-results__section">
-                    <h2>Suggestions</h2>
-                    <div id="suggestions-list" class="suggestions-list"></div>
+                    <button id="close-search" class="close-btn panel-icon-btn" type="button" aria-label="Close search">
+                        <img src="icon/icon--close.svg" alt="">
+                    </button>
                 </div>
 
-                <div class="search-results__section">
-                    <h2>Products</h2>
+                <div id="search-results" class="search-results" hidden>
+                    <div class="search-results__section">
+                        <h2>Suggestions</h2>
+                        <div id="suggestions-list" class="suggestions-list"></div>
+                    </div>
 
-                    <article class="product-card">
-                        <a class="product-card__image-link" href="product-pandan.html" aria-label="View Coconut Pandan Basque Cheesecake product page">
-                            <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
-                        </a>
-                        <div class="product-card__content">
-                            <h3>Coconut Pandan Basque Cheesecake</h3>
-                            <p>A$14.90 - A$119.90</p>
-                            <button type="button">Add to cart</button>
-                        </div>
-                    </article>
+                    <div class="search-results__section">
+                        <h2>Products</h2>
 
-                    <article class="product-card">
-                        <a class="product-card__image-link" href="product-matcha.html" aria-label="View Premium Matcha Raspberry Basque Cheesecake product page">
-                            <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
-                        </a>
-                        <div class="product-card__content">
-                            <h3>Premium Matcha Raspberry Basque Cheesecake</h3>
-                            <p>A$16.90 - A$149.90</p>
-                            <button type="button">Add to cart</button>
-                        </div>
-                    </article>
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-pandan.html" aria-label="View Coconut Pandan Basque Cheesecake product page">
+                                <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Coconut Pandan Basque Cheesecake</h3>
+                                <p>A$14.90 - A$119.90</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-matcha.html" aria-label="View Premium Matcha Raspberry Basque Cheesecake product page">
+                                <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Premium Matcha Raspberry Basque Cheesecake</h3>
+                                <p>A$16.90 - A$149.90</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
-          </div>
-          <button type="button" aria-label="Open cart">
-              <img src="icon/symbol--cart.svg" alt="Cart">
-          </button>
-      
-          <button type="button" aria-label="Open menu">
-              <img src="icon/symbol--burger.svg" alt="Menu">
-          </button>
-      </nav>
+
+            <button type="button" aria-label="Open cart">
+                <img src="icon/symbol--cart.svg" alt="Cart">
+            </button>
+
+            <button type="button" aria-label="Open menu">
+                <img src="icon/symbol--burger.svg" alt="Menu">
+            </button>
+        </nav>
     </header>
+
+    <main class="inner-page__content product-page" data-product-page>
+        <section class="product-page__layout" aria-label="Product details">
+            <div class="product-page__media">
+                <div class="product-page__image-frame">
+                    <img
+                        class="product-page__image"
+                        src="img/pandan cc.webp"
+                        alt="Coconut Pandan Basque Cheesecake"
+                    >
+                </div>
+
+                <div class="product-gallery-controls" aria-label="Product gallery controls">
+                    <button class="product-gallery-controls__arrow" type="button" data-gallery-arrow="prev" aria-label="Previous product image">
+                        &larr;
+                    </button>
+
+                    <div class="product-gallery-controls__dots" role="tablist" aria-label="Product image positions">
+                        <button class="product-gallery-controls__dot is-active" type="button" data-gallery-dot="0" aria-label="Image position 1"></button>
+                        <button class="product-gallery-controls__dot" type="button" data-gallery-dot="1" aria-label="Image position 2"></button>
+                        <button class="product-gallery-controls__dot" type="button" data-gallery-dot="2" aria-label="Image position 3"></button>
+                        <button class="product-gallery-controls__dot" type="button" data-gallery-dot="3" aria-label="Image position 4"></button>
+                        <button class="product-gallery-controls__dot" type="button" data-gallery-dot="4" aria-label="Image position 5"></button>
+                    </div>
+
+                    <button class="product-gallery-controls__arrow" type="button" data-gallery-arrow="next" aria-label="Next product image">
+                        &rarr;
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-page__details">
+                <div class="product-page__summary">
+                    <h1 class="product-page__title" data-popup-name>Coconut Pandan Basque Cheesecake</h1>
+                    <p class="product-page__price">$14.90 AUD</p>
+                </div>
+
+                <label class="product-page__label" for="product-size">Size</label>
+                <select id="product-size" class="product-page__select" data-size-select>
+                    <option value="Slice">Slice</option>
+                    <option value="4 inch">4 inch</option>
+                    <option value="6 inch">6 inch</option>
+                    <option value="8 inch">8 inch</option>
+                </select>
+
+                <div class="product-page__purchase-row">
+                    <div class="quantity-picker" aria-label="Quantity selector">
+                        <button class="quantity-picker__button" type="button" data-quantity-action="decrease" aria-label="Decrease quantity">-</button>
+                        <span class="quantity-picker__value" data-quantity-value>1</span>
+                        <button class="quantity-picker__button" type="button" data-quantity-action="increase" aria-label="Increase quantity">+</button>
+                    </div>
+
+                    <button
+                        class="product-page__add-to-cart"
+                        type="button"
+                        data-add-to-cart
+                        data-product-name="Coconut Pandan Basque Cheesecake"
+                        data-product-image="img/pandan cc.webp"
+                    >
+                        Add to cart
+                    </button>
+                </div>
+
+                <section class="product-page__section">
+                    <h2>Product Description</h2>
+                    <p>
+                        Our Coconut Pandan Basque Cheesecake is a customer favourite, made with fragrant pandan and creamy cheesecake for a balanced tropical flavour.
+                        The toasted coconut finish and silky texture make it perfect for celebrations, gifting, or an everyday dessert treat.
+                    </p>
+                </section>
+
+                <section class="product-page__section">
+                    <h2>Important Information</h2>
+                    <p><strong>Size &amp; Serving Guide</strong></p>
+                    <ul class="product-page__info-list">
+                        <li>Slice - perfect for one person.</li>
+                        <li>4 inch - ideal for 2 to 4 people.</li>
+                        <li>6 inch - ideal for 4 to 6 people.</li>
+                        <li>8 inch - ideal for 6 to 8 people.</li>
+                    </ul>
+                </section>
+            </div>
+        </section>
+
+        <aside class="cart-popup" data-cart-popup hidden aria-live="polite">
+            <button class="cart-popup__close" type="button" data-popup-close aria-label="Close add to cart popup">&times;</button>
+            <p class="cart-popup__status">&#10003; Item added to your cart</p>
+
+            <div class="cart-popup__body">
+                <img class="cart-popup__image" src="img/pandan cc.webp" alt="Selected product" data-popup-image>
+
+                <div class="cart-popup__content">
+                    <h2 class="cart-popup__title" data-popup-title>Coconut Pandan Basque Cheesecake</h2>
+                    <p class="cart-popup__meta">Size: <span data-popup-size>Slice</span></p>
+                </div>
+            </div>
+
+            <a class="cart-popup__primary" href="shoppingcart.html">View my cart</a>
+            <button class="cart-popup__secondary" type="button" data-popup-close>Continue shopping</button>
+        </aside>
+    </main>
 </body>
+</html>
