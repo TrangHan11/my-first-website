@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>My-First-Website</title>
+    <title>Results</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Suranna&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
 </head>
-<body>
+<body class="inner-page">
     <header class="navbar">
         <nav class="logo">
-          <a href="index.html" aria-label="Go to homepage">
-            <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
-          </a>
+            <a href="index.html" aria-label="Go to homepage">
+              <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
+            </a>
         </nav>
       
         <nav class="icons">
@@ -77,18 +77,62 @@
           </button>
       </nav>
     </header>
-    <div class="homepage">
-        <div class="overlay-box">
-          <h1>LOVEY PATISSERIE</h1>
-          <p>
-            Lovey Patisserie Café is a Melbourne-based patisserie specialising in light, Asian-inspired desserts that are balanced and not overly sweet. From airy chiffon shortcakes to creamy Basque cheesecakes, our desserts are crafted with premium ingredients and refined techniques, perfect for celebrations, gifting, or everyday indulgence.
-          </p>
-          <button>SHOP NOW</button>
+
+    <main class="inner-page__content results-page">
+        <h1 class="results-page__title">Search Result</h1>
+
+        <div class="results-page__search">
+            <label class="results-page__search-label" for="results-search-input">Search</label>
+
+            <div class="results-page__search-box">
+                <input id="results-search-input" class="results-page__search-input" type="text" value="Cheese">
+
+                <button class="results-page__icon-btn results-page__clear-btn" type="button" aria-label="Clear search">
+                    <img src="icon/icon--close.svg" alt="">
+                </button>
+
+                <button class="results-page__icon-btn results-page__submit-btn" type="button" aria-label="Search results">
+                    <img src="icon/symbol--search.svg" alt="">
+                </button>
+            </div>
         </div>
 
-        <a class="next-page-btn" href="intro.html" aria-label="Go to intro page">
-          <img src="icon/symbol--arrow-right.svg" alt="">
-        </a>
-    </div>
+        <div class="results-page__toolbar">
+            <button class="results-page__filter-btn" type="button">
+                <img class="results-page__filter-icon" src="icon/filter.jpg" alt="">
+                <span>Filter</span>
+            </button>
+            <p class="results-page__count">5 results</p>
+        </div>
+
+        <section class="results-grid" aria-label="Search results products">
+            <article class="results-card">
+                <a class="results-card__image-link" href="product-pandan.html">
+                    <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
+                </a>
+                <a class="results-card__name-link" href="product-pandan.html">Coconut Pandan Basque Cheesecake</a>
+                <p class="results-card__price">A$14.90 - A$119.90</p>
+                <button class="results-card__cart-btn" type="button">Add to cart</button>
+            </article>
+
+            <article class="results-card">
+                <a class="results-card__image-link" href="product-matcha.html">
+                    <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
+                </a>
+                <a class="results-card__name-link" href="product-matcha.html">Premium Matcha Raspberry Basque Cheesecake</a>
+                <p class="results-card__price">A$16.90 - A$149.90</p>
+                <button class="results-card__cart-btn" type="button">Add to cart</button>
+            </article>
+
+            <article class="results-card">
+                <a class="results-card__image-link" href="results.html">
+                    <img src="img/bg.webp" alt="Thai Milk Tea Basque Cheesecake">
+                </a>
+                <a class="results-card__name-link" href="results.html">Thai Milk Tea Basque Cheesecake</a>
+                <p class="results-card__price">A$14.90 - A$119.90</p>
+                <button class="results-card__cart-btn" type="button">Add to cart</button>
+            </article>
+        </section>
+    </main>
 </body>
 </html>

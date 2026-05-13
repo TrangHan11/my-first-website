@@ -1,0 +1,5 @@
+<svg class="svg symbol symbol--burger" width="24" height="28" viewBox="0 0 24 28" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Menu">
+  <path d="M0 5H24V7H0V5Z" fill="black"/>
+  <path d="M0 13H24V14V15H0C0 14.7071 0 14.2286 0 14C0 13.7714 0 13.2929 0 13Z" fill="black"/>
+  <path d="M0 21H24V23H0V21Z" fill="black"/>
+</svg>
