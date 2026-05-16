@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-    <title>Results</title>
+    <title>Checkout</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Suranna&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
@@ -77,4 +77,221 @@
           </button>
       </nav>
     </header>
+    <main class="inner-page__content checkout-page" data-checkout-page>
+        <section class="checkout-page__main">
+            <form class="checkout-page__form" action="#" method="post">
+                <nav class="cart-steps" aria-label="Checkout progress">
+                    <ol class="cart-steps__labels">
+                        <li>
+                            <a href="shoppingcart.html">Shopping cart</a>
+                        </li>
+                        <li aria-current="step">
+                            <span>Check out</span>
+                        </li>
+                        <li>
+                            <span>Complete</span>
+                        </li>
+                    </ol>
+
+                    <div class="cart-steps__track" aria-hidden="true">
+                        <span class="cart-steps__line"></span>
+                        <span class="cart-steps__circle">1</span>
+                        <span class="cart-steps__circle is-active">2</span>
+                        <span class="cart-steps__circle">3</span>
+                    </div>
+                </nav>
+
+                <section class="checkout-card checkout-card--express" aria-labelledby="checkout-express-title">
+                    <h1 id="checkout-express-title">Express checkout</h1>
+                    <div class="checkout-express">
+                        <button class="checkout-express__button checkout-express__button--shop-pay" type="button">Shop Pay</button>
+                        <button class="checkout-express__button checkout-express__button--paypal" type="button">PayPal</button>
+                        <button class="checkout-express__button checkout-express__button--google-pay" type="button">Google Pay</button>
+                    </div>
+                    <div class="checkout-express__divider" aria-hidden="true">
+                        <span></span>
+                        <strong>OR</strong>
+                        <span></span>
+                    </div>
+                </section>
+
+                <section class="checkout-card" aria-labelledby="checkout-contact-title">
+                    <div class="checkout-card__header">
+                        <h2 id="checkout-contact-title">Contact</h2>
+                        <a class="checkout-card__action" href="#" aria-label="Sign in to your account">Sign in</a>
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="checkout-email">Email</label>
+                        <input id="checkout-email" name="email" type="email" placeholder="Email" autocomplete="email">
+                    </div>
+
+                    <label class="checkout-checkbox">
+                        <input type="checkbox" name="email-updates">
+                        <span>Email me with news and offers</span>
+                    </label>
+                </section>
+
+                <section class="checkout-card checkout-card--delivery" aria-labelledby="checkout-delivery-title">
+                    <h2 id="checkout-delivery-title">Delivery</h2>
+
+                    <fieldset class="checkout-method-toggle" aria-labelledby="checkout-delivery-title">
+                        <label class="checkout-method-toggle__option">
+                            <input type="radio" name="delivery-method" value="ship" checked>
+                            <span>Ship</span>
+                        </label>
+                        <label class="checkout-method-toggle__option">
+                            <input type="radio" name="delivery-method" value="pickup">
+                            <span>Pickup</span>
+                        </label>
+                    </fieldset>
+
+                    <div class="checkout-field">
+                        <label for="checkout-country">Country/Region</label>
+                        <select id="checkout-country" name="country" autocomplete="country-name">
+                            <option value="Australia">Australia</option>
+                        </select>
+                    </div>
+
+                    <div class="checkout-field-group">
+                        <div class="checkout-field">
+                            <label for="checkout-first-name">First name</label>
+                            <input id="checkout-first-name" name="first-name" type="text" placeholder="First name" autocomplete="given-name">
+                        </div>
+                        <div class="checkout-field">
+                            <label for="checkout-last-name">Last name</label>
+                            <input id="checkout-last-name" name="last-name" type="text" placeholder="Last name" autocomplete="family-name">
+                        </div>
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="checkout-address">Address</label>
+                        <input id="checkout-address" name="address" type="text" placeholder="Street address" autocomplete="address-line1">
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="checkout-apartment">Apartment, suite, etc. (optional)</label>
+                        <input id="checkout-apartment" name="apartment" type="text" placeholder="Apartment, suite, etc." autocomplete="address-line2">
+                    </div>
+
+                    <div class="checkout-field-group checkout-field-group--address-meta">
+                        <div class="checkout-field">
+                            <label for="checkout-suburb">Suburb</label>
+                            <input id="checkout-suburb" name="suburb" type="text" placeholder="Suburb" autocomplete="address-level2">
+                        </div>
+                        <div class="checkout-field">
+                            <label for="checkout-state">State</label>
+                            <select id="checkout-state" name="state" autocomplete="address-level1">
+                                <option value="">State</option>
+                                <option value="NSW">NSW</option>
+                                <option value="QLD">QLD</option>
+                                <option value="SA">SA</option>
+                                <option value="TAS">TAS</option>
+                                <option value="VIC">VIC</option>
+                                <option value="WA">WA</option>
+                            </select>
+                        </div>
+                        <div class="checkout-field">
+                            <label for="checkout-postcode">Postcode</label>
+                            <input id="checkout-postcode" name="postcode" type="text" inputmode="numeric" placeholder="Postcode" autocomplete="postal-code">
+                        </div>
+                    </div>
+
+                    <div class="checkout-field">
+                        <label for="checkout-phone">Phone number</label>
+                        <input id="checkout-phone" name="phone" type="tel" placeholder="Phone number" autocomplete="tel">
+                    </div>
+                </section>
+
+                <section class="checkout-card" aria-labelledby="checkout-pickup-title">
+                    <h2 id="checkout-pickup-title">Pickup method</h2>
+                    <div class="checkout-option">
+                        <div class="checkout-selection" aria-label="Selected pickup method">
+                            <span class="checkout-selection__indicator" aria-hidden="true"></span>
+                            <span>Pick up in store</span>
+                        </div>
+                        <p>Please bring your confirmation email when collecting your order.</p>
+                    </div>
+                </section>
+
+                <section class="checkout-card checkout-card--payment" aria-labelledby="checkout-payment-title">
+                    <h2 id="checkout-payment-title">Payment</h2>
+                    <p>All transactions are secure and encrypted.</p>
+
+                    <div class="checkout-option checkout-option--payment">
+                        <div class="checkout-selection" aria-label="Selected payment method">
+                            <span class="checkout-selection__indicator" aria-hidden="true"></span>
+                            <span>Credit card</span>
+                        </div>
+
+                        <div class="checkout-field">
+                            <label for="checkout-card-number">Card number</label>
+                            <input id="checkout-card-number" name="card-number" type="text" inputmode="numeric" placeholder="Card number" autocomplete="cc-number">
+                        </div>
+
+                        <div class="checkout-field-group checkout-field-group--payment-details">
+                            <div class="checkout-field">
+                                <label for="checkout-card-name">Name on card</label>
+                                <input id="checkout-card-name" name="card-name" type="text" placeholder="Name on card" autocomplete="cc-name">
+                            </div>
+                            <div class="checkout-field">
+                                <label for="checkout-card-expiry">Expiry date</label>
+                                <input id="checkout-card-expiry" name="card-expiry" type="text" placeholder="MM / YY" autocomplete="cc-exp">
+                            </div>
+                            <div class="checkout-field">
+                                <label for="checkout-card-code">Security code</label>
+                                <input id="checkout-card-code" name="card-code" type="text" inputmode="numeric" placeholder="CVV" autocomplete="cc-csc">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <button class="checkout-page__pay" type="submit">Pay now</button>
+            </form>
+
+            <aside class="checkout-page__summary" aria-labelledby="checkout-summary-title">
+                <h2 id="checkout-summary-title" class="checkout-page__summary-title">Order summary</h2>
+
+                <div class="checkout-summary__items" data-checkout-items></div>
+
+                <div class="checkout-summary__discount">
+                    <label for="checkout-discount">Discount code</label>
+                    <div class="checkout-summary__discount-controls">
+                        <input id="checkout-discount" name="discount-code" type="text" placeholder="Discount code">
+                        <button type="button">Apply</button>
+                    </div>
+                </div>
+
+                <div class="checkout-summary__totals">
+                    <div class="checkout-summary__row">
+                        <span>Subtotal</span>
+                        <strong data-checkout-subtotal>A$0.00</strong>
+                    </div>
+                    <div class="checkout-summary__row">
+                        <span>Shipping</span>
+                        <span>Enter shipping address</span>
+                    </div>
+                    <div class="checkout-summary__row checkout-summary__row--total">
+                        <span>Total</span>
+                        <strong data-checkout-total>A$0.00</strong>
+                    </div>
+                </div>
+            </aside>
+        </section>
+    </main>
+
+    <template id="checkout-item-template">
+        <article class="checkout-summary__item" data-checkout-item>
+            <div class="checkout-summary__media">
+                <img class="checkout-summary__image" src="" alt="" data-checkout-item-image>
+                <span class="checkout-summary__badge" data-checkout-item-quantity>1</span>
+            </div>
+            <div class="checkout-summary__details">
+                <h3 data-checkout-item-name></h3>
+                <p data-checkout-item-size></p>
+            </div>
+            <strong data-checkout-item-price></strong>
+        </article>
+    </template>
 </body>
+</html>
