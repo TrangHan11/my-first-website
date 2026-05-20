@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Complete</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&family=Suranna&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body class="inner-page">
+    <header class="navbar">
+        <nav class="logo">
+            <a href="index.html" aria-label="Go to homepage">
+                <img src="img/Lovey_Logo_Colour_RGB_2_2.avif" alt="logo">
+            </a>
+        </nav>
+
+        <nav class="icons">
+            <button id="search-icon" class="search-btn" type="button" aria-label="Open search">
+                <img src="icon/symbol--search.svg" alt="Search">
+            </button>
+
+            <div id="search-panel" class="search-panel" aria-hidden="true">
+                <div class="search-top">
+                    <input id="search-input" type="text" placeholder="Search" class="search-input" aria-label="Search">
+
+                    <button id="search-submit" class="panel-icon-btn" type="button" aria-label="Search products">
+                        <img src="icon/symbol--search.svg" alt="">
+                    </button>
+
+                    <button id="close-search" class="close-btn panel-icon-btn" type="button" aria-label="Close search">
+                        <img src="icon/icon--close.svg" alt="">
+                    </button>
+                </div>
+
+                <div id="search-results" class="search-results" hidden>
+                    <div class="search-results__section">
+                        <h2>Suggestions</h2>
+                        <div id="suggestions-list" class="suggestions-list"></div>
+                    </div>
+
+                    <div class="search-results__section">
+                        <h2>Products</h2>
+
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-pandan.html" aria-label="View Coconut Pandan Basque Cheesecake product page">
+                                <img src="img/pandan cc.webp" alt="Coconut Pandan Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Coconut Pandan Basque Cheesecake</h3>
+                                <p>$14.90 AUD - $119.90 AUD</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <a class="product-card__image-link" href="product-matcha.html" aria-label="View Premium Matcha Raspberry Basque Cheesecake product page">
+                                <img src="img/straw matcha cc.webp" alt="Premium Matcha Raspberry Basque Cheesecake">
+                            </a>
+                            <div class="product-card__content">
+                                <h3>Premium Matcha Raspberry Basque Cheesecake</h3>
+                                <p>$16.90 AUD - $149.90 AUD</p>
+                                <button type="button">Add to cart</button>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+            <button class="cart-btn" type="button" aria-label="Open cart">
+                <img src="icon/symbol--cart.svg" alt="Cart">
+                <span class="cart-count" aria-hidden="true">0</span>
+            </button>
+
+            <button type="button" aria-label="Open menu">
+                <img src="icon/symbol--burger.svg" alt="Menu">
+            </button>
+        </nav>
+    </header>
+
+    <main class="inner-page__content complete-page" data-complete-page>
+        <nav class="cart-steps" aria-label="Checkout progress">
+            <ol class="cart-steps__labels">
+                <li>
+                    <a href="shoppingcart.html">Shopping cart</a>
+                </li>
+                <li>
+                    <a href="checkout.html">Check out</a>
+                </li>
+                <li aria-current="step">
+                    <a href="complete.html">Complete</a>
+                </li>
+            </ol>
+
+            <div class="cart-steps__track" aria-hidden="true">
+                <span class="cart-steps__line"></span>
+                <span class="cart-steps__circle">1</span>
+                <span class="cart-steps__circle">2</span>
+                <span class="cart-steps__circle is-active">3</span>
+            </div>
+        </nav>
+
+        <section class="complete-page__main">
+            <section class="complete-page__hero" aria-labelledby="complete-title">
+                <span class="complete-page__icon" aria-hidden="true">
+                    <svg viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"/>
+                    </svg>
+                </span>
+                <h1 id="complete-title">Payment Successful</h1>
+                <p class="complete-page__message">
+                    Your order has been confirmed and is being prepared by our pastry chefs.
+                    We’ll notify you once it’s ready for pickup.
+                </p>
+
+                <section class="complete-status" id="order-status-panel" aria-label="Order status">
+                    <div class="complete-status__meta">
+                        <div class="complete-status__meta-block">
+                            <p>Order ID</p>
+                            <strong>#LP-99283-X</strong>
+                        </div>
+                        <div class="complete-status__meta-block complete-status__meta-block--time">
+                            <p>Estimated Prep Time</p>
+                            <strong>25-30 Minutes</strong>
+                        </div>
+                    </div>
+
+                    <div class="order-tracker" aria-label="Order progress">
+                        <span class="order-tracker__line" aria-hidden="true"></span>
+                        <span class="order-tracker__line order-tracker__line--progress" aria-hidden="true"></span>
+
+                        <article class="order-tracker__step is-complete">
+                            <span class="order-tracker__icon" aria-hidden="true">
+                                <svg viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"/>
+                                </svg>
+                            </span>
+                            <h2 class="order-tracker__label">Confirmed</h2>
+                        </article>
+
+                        <article class="order-tracker__step is-current">
+                            <span class="order-tracker__icon" aria-hidden="true">
+                                <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" d="M320 384H128V224H64v256c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V224h-64v160zm314.6-241.8l-85.3-128c-6-8.9-16-14.2-26.7-14.2H117.4c-10.7 0-20.7 5.3-26.6 14.2l-85.3 128c-14.2 21.3 1 49.8 26.6 49.8H608c25.5 0 40.7-28.5 26.6-49.8zM512 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V224h-64v272z"/>
+                                </svg>
+                            </span>
+                            <h2 class="order-tracker__label">Preparing</h2>
+                        </article>
+
+                        <article class="order-tracker__step">
+                            <span class="order-tracker__icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 28" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M7.20513 7.11364H4.96283C3.37199 7.11364 2.05776 8.35543 1.96765 9.94371L1.17984 23.8301C1.08221 25.551 2.45138 27 4.17502 27H19.825C21.5486 27 22.9178 25.551 22.8202 23.8301L22.0324 9.94371C21.9422 8.35542 20.628 7.11364 19.0372 7.11364H16.7949M7.20513 7.11364V5C7.20513 2.79086 8.99599 1 11.2051 1H12.7949C15.004 1 16.7949 2.79086 16.7949 5V7.11364M7.20513 7.11364H16.7949" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                                </svg>
+                            </span>
+                            <h2 class="order-tracker__label">Ready</h2>
+                        </article>
+
+                        <article class="order-tracker__step">
+                            <span class="order-tracker__icon order-tracker__icon--double" aria-hidden="true">
+                                <svg viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"/>
+                                </svg>
+                                <svg viewBox="0 0 12 9" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" fill-rule="evenodd" clip-rule="evenodd" d="M11.35.643a.5.5 0 01.006.707l-6.77 6.886a.5.5 0 01-.719-.006L.638 4.845a.5.5 0 11.724-.69l2.872 3.011 6.41-6.517a.5.5 0 01.707-.006h-.001z"/>
+                                </svg>
+                            </span>
+                            <h2 class="order-tracker__label">Collected</h2>
+                        </article>
+                    </div>
+
+                    <article class="order-status-mobile" aria-label="Preparing your order">
+                        <div class="order-status-mobile__top">
+                            <strong>STATUS: PREPARING</strong>
+                            <span>EST. 20 MINS</span>
+                        </div>
+
+                        <div class="order-status-mobile__progress" aria-hidden="true">
+                            <span></span>
+                        </div>
+
+                        <div class="order-status-mobile__body">
+                            <span class="order-status-mobile__icon" aria-hidden="true">
+                                <svg viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill="currentColor" d="M320 384H128V224H64v256c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V224h-64v160zm314.6-241.8l-85.3-128c-6-8.9-16-14.2-26.7-14.2H117.4c-10.7 0-20.7 5.3-26.6 14.2l-85.3 128c-14.2 21.3 1 49.8 26.6 49.8H608c25.5 0 40.7-28.5 26.6-49.8zM512 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V224h-64v272z"/>
+                                </svg>
+                            </span>
+
+                            <div class="order-status-mobile__content">
+                                <h2>Preparing your order</h2>
+                                <p data-complete-mobile-message>
+                                    Our pastry chefs are carefully packaging your treats.
+                                </p>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+            </section>
+
+            <aside class="complete-summary" aria-labelledby="complete-summary-title">
+                <h2 id="complete-summary-title">Order Summary</h2>
+
+                <div class="complete-summary__items" data-complete-items></div>
+
+                <div class="complete-summary__totals">
+                    <div class="complete-summary__row">
+                        <span>Subtotal</span>
+                        <strong data-complete-subtotal>A$0.00</strong>
+                    </div>
+                    <div class="complete-summary__row">
+                        <span>Store Pickup</span>
+                        <strong>FREE</strong>
+                    </div>
+                    <div class="complete-summary__row complete-summary__row--total">
+                        <span>Total</span>
+                        <strong data-complete-total>A$0.00</strong>
+                    </div>
+                </div>
+
+                <a class="complete-summary__button" href="#order-status-panel">Track Order</a>
+                <a class="complete-summary__button complete-summary__button--secondary" href="index.html">Back home</a>
+            </aside>
+        </section>
+    </main>
+
+    <template id="complete-item-template">
+        <article class="complete-summary__item" data-complete-item>
+            <div class="complete-summary__media">
+                <img src="" alt="" data-complete-item-image>
+                <span class="complete-summary__badge" data-complete-item-quantity>1</span>
+            </div>
+
+            <div class="complete-summary__details">
+                <h3 data-complete-item-name></h3>
+                <p data-complete-item-size></p>
+                <strong data-complete-item-price></strong>
+            </div>
+        </article>
+    </template>
+</body>
+</html>
