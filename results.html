@@ -78,7 +78,7 @@
       </nav>
     </header>
 
-    <main class="inner-page__content results-page">
+    <main class="inner-page__content results-page" data-results-page>
         <h1 class="results-page__title">Search Result</h1>
 
         <div class="results-page__search">
@@ -97,7 +97,7 @@
 
         <div class="results-page__toolbar">
             <button class="results-page__filter-btn" type="button">
-                <img class="results-page__filter-icon" src="icon/filter.jpg" alt="">
+                <img class="results-page__filter-icon" src="icon/filter.svg" alt="">
                 <span>Filter</span>
             </button>
             <p class="results-page__count">5 results</p>
@@ -110,7 +110,15 @@
                 </a>
                 <a class="results-card__name-link" href="product-pandan.html">Coconut Pandan Basque Cheesecake</a>
                 <p class="results-card__price">$14.90 AUD - $119.90 AUD</p>
-                <button class="results-card__cart-btn" type="button">Add to cart</button>
+                <button
+                    class="results-card__cart-btn"
+                    type="button"
+                    data-add-to-cart
+                    data-product-id="coconut-pandan-basque-cheesecake"
+                    data-product-name="Coconut Pandan Basque Cheesecake"
+                    data-product-image="img/pandan cc.webp"
+                    data-product-price="14.9"
+                >Add to cart</button>
             </article>
 
             <article class="results-card">
@@ -119,7 +127,15 @@
                 </a>
                 <a class="results-card__name-link" href="product-matcha.html">Premium Matcha Raspberry Basque Cheesecake</a>
                 <p class="results-card__price">$16.90 AUD - $149.90 AUD</p>
-                <button class="results-card__cart-btn" type="button">Add to cart</button>
+                <button
+                    class="results-card__cart-btn"
+                    type="button"
+                    data-add-to-cart
+                    data-product-id="premium-matcha-raspberry-basque-cheesecake"
+                    data-product-name="Premium Matcha Raspberry Basque Cheesecake"
+                    data-product-image="img/straw matcha cc.webp"
+                    data-product-price="16.9"
+                >Add to cart</button>
             </article>
 
             <article class="results-card">
@@ -128,25 +144,49 @@
                 </a>
                 <a class="results-card__name-link" href="product-thaimilk.html">Thai Milk Tea Basque Cheesecake</a>
                 <p class="results-card__price">$14.90 AUD - $119.90 AUD</p>
-                <button class="results-card__cart-btn" type="button">Add to cart</button>
+                <button
+                    class="results-card__cart-btn"
+                    type="button"
+                    data-add-to-cart
+                    data-product-id="thai-milk-tea-basque-cheesecake"
+                    data-product-name="Thai Milk Tea Basque Cheesecake"
+                    data-product-image="img/thaimilktea.webp"
+                    data-product-price="14.9"
+                >Add to cart</button>
             </article>
 
             <article class="results-card">
-                <a class="results-card__image-link" href="results.html">
+                <a class="results-card__image-link" href="product-matcha.html">
                     <img src="img/hojicha.webp" alt="Hojicha Cheesecake">
                 </a>
-                <a class="results-card__name-link" href="results.html">Premium Hojicha White Chocolate Basque Cheesecake</a>
+                <a class="results-card__name-link" href="product-matcha.html">Premium Hojicha White Chocolate Basque Cheesecake</a>
                 <p class="results-card__price">$46.90 AUD - $149.90 AUD</p>
-                <button class="results-card__cart-btn" type="button">Add to cart</button>
+                <button
+                    class="results-card__cart-btn"
+                    type="button"
+                    data-add-to-cart
+                    data-product-id="premium-hojicha-white-chocolate-basque-cheesecake"
+                    data-product-name="Premium Hojicha White Chocolate Basque Cheesecake"
+                    data-product-image="img/hojicha.webp"
+                    data-product-price="46.9"
+                >Add to cart</button>
             </article>
 
             <article class="results-card">
-                <a class="results-card__image-link" href="results.html">
+                <a class="results-card__image-link" href="product-pandan.html">
                     <img src="img/earlgrey matcha.webp" alt="Earl grey Matcha Basque Cheesecake">
                 </a>
-                <a class="results-card__name-link" href="results.html">Earl grey Matcha Basque Cheesecake</a>
+                <a class="results-card__name-link" href="product-pandan.html">Earl grey Matcha Basque Cheesecake</a>
                 <p class="results-card__price">$16.90 AUD - $149.90 AUD</p>
-                <button class="results-card__cart-btn" type="button">Add to cart</button>
+                <button
+                    class="results-card__cart-btn"
+                    type="button"
+                    data-add-to-cart
+                    data-product-id="earl-grey-matcha-basque-cheesecake"
+                    data-product-name="Earl grey Matcha Basque Cheesecake"
+                    data-product-image="img/earlgrey matcha.webp"
+                    data-product-price="16.9"
+                >Add to cart</button>
             </article>
         </section>
     </main>

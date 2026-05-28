@@ -79,14 +79,14 @@
     </header>
     <main class="inner-page__content checkout-page" data-checkout-page>
         <section class="checkout-page__main">
-            <form class="checkout-page__form" action="#" method="post">
+            <form class="checkout-page__form" action="complete.html" method="get">
                 <nav class="cart-steps" aria-label="Checkout progress">
                     <ol class="cart-steps__labels">
                         <li>
                             <a href="shoppingcart.html">Shopping cart</a>
                         </li>
                         <li aria-current="step">
-                            <span>Check out</span>
+                            <a href="checkout.html">Check out</a>
                         </li>
                         <li>
                             <span>Complete</span>
@@ -101,6 +101,44 @@
                     </div>
                 </nav>
 
+                <div class="checkout-summary-drawer">
+                    <button class="checkout-summary-toggle" type="button" data-checkout-summary-toggle aria-expanded="false" aria-controls="checkout-summary-panel">
+                        <span class="checkout-summary-toggle__label">Order Summary</span>
+                        <span class="checkout-summary-toggle__icon" aria-hidden="true"></span>
+                        <strong class="checkout-summary-toggle__total" data-checkout-toggle-total>A$0.00</strong>
+                    </button>
+
+                    <aside class="checkout-page__summary" id="checkout-summary-panel" data-checkout-summary-panel aria-labelledby="checkout-summary-title">
+                        <h2 id="checkout-summary-title" class="checkout-page__summary-title">Order summary</h2>
+
+                        <div class="checkout-summary__items" data-checkout-items></div>
+
+                        <div class="checkout-summary__discount">
+                            <label for="checkout-discount">Discount code</label>
+                            <div class="checkout-summary__discount-controls">
+                                <input id="checkout-discount" name="discount-code" type="text" placeholder="Discount code">
+                                <button type="button">Apply</button>
+                            </div>
+                        </div>
+
+                        <div class="checkout-summary__totals">
+                            <div class="checkout-summary__row">
+                                <span>Subtotal</span>
+                                <strong data-checkout-subtotal>A$0.00</strong>
+                            </div>
+                            <div class="checkout-summary__row">
+                                <span>Shipping</span>
+                                <span>Enter shipping address</span>
+                            </div>
+                            <div class="checkout-summary__row checkout-summary__row--total">
+                                <span>Total</span>
+                                <strong data-checkout-total>A$0.00</strong>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+
+                <div class="checkout-page__form-body">
                 <section class="checkout-card checkout-card--express" aria-labelledby="checkout-express-title">
                     <h1 id="checkout-express-title">Express checkout</h1>
                     <div class="checkout-express">
@@ -247,36 +285,8 @@
                 </section>
 
                 <button class="checkout-page__pay" type="submit">Pay now</button>
+                </div>
             </form>
-
-            <aside class="checkout-page__summary" aria-labelledby="checkout-summary-title">
-                <h2 id="checkout-summary-title" class="checkout-page__summary-title">Order summary</h2>
-
-                <div class="checkout-summary__items" data-checkout-items></div>
-
-                <div class="checkout-summary__discount">
-                    <label for="checkout-discount">Discount code</label>
-                    <div class="checkout-summary__discount-controls">
-                        <input id="checkout-discount" name="discount-code" type="text" placeholder="Discount code">
-                        <button type="button">Apply</button>
-                    </div>
-                </div>
-
-                <div class="checkout-summary__totals">
-                    <div class="checkout-summary__row">
-                        <span>Subtotal</span>
-                        <strong data-checkout-subtotal>A$0.00</strong>
-                    </div>
-                    <div class="checkout-summary__row">
-                        <span>Shipping</span>
-                        <span>Enter shipping address</span>
-                    </div>
-                    <div class="checkout-summary__row checkout-summary__row--total">
-                        <span>Total</span>
-                        <strong data-checkout-total>A$0.00</strong>
-                    </div>
-                </div>
-            </aside>
         </section>
     </main>
 

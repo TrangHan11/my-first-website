@@ -81,20 +81,25 @@
 
     <main class="inner-page__content cart-page" data-cart-page>
         <section class="cart-page__filled" data-cart-filled>
-            <div class="cart-steps" aria-label="Checkout progress">
-                <div class="cart-steps__labels">
-                    <span>Shopping cart</span>
-                    <span>Check out</span>
-                    <span>Complete</span>
-                </div>
-
-                <div class="cart-steps__track">
+            <nav class="cart-steps" aria-label="Checkout progress">
+                <ol class="cart-steps__labels">
+                    <li aria-current="step">
+                        <span>Shopping cart</span>
+                    </li>
+                    <li>
+                        <a href="checkout.html">Check out</a>
+                    </li>
+                    <li>
+                        <span>Complete</span>
+                    </li>
+                </ol>
+                <div class="cart-steps__track" aria-hidden="true">
                     <span class="cart-steps__line"></span>
                     <span class="cart-steps__circle is-active">1</span>
                     <span class="cart-steps__circle">2</span>
                     <span class="cart-steps__circle">3</span>
                 </div>
-            </div>
+            </nav>
 
             <div class="cart-table__head" aria-hidden="true">
                 <span>Product</span>
@@ -164,29 +169,29 @@
 
     <template id="cart-item-template">
         <article class="cart-item" data-cart-item>
-            <div class="cart-item__product">
-                <img class="cart-item__image" src="" alt="" data-cart-item-image>
+            <img class="cart-item__image" src="" alt="" data-cart-item-image>
 
-                <div class="cart-item__details">
-                    <h2 data-cart-item-name></h2>
-                    <p class="cart-item__price" data-cart-item-price></p>
-                    <p class="cart-item__size" data-cart-item-size></p>
+            <div class="cart-item__content">
+                <h2 class="cart-item__name" data-cart-item-name></h2>
+                <p class="cart-item__price" data-cart-item-price></p>
+                <p class="cart-item__size" data-cart-item-size></p>
+
+                <div class="cart-item__actions">
+                    <div class="cart-item__quantity" aria-label="Quantity">
+                        <button type="button" disabled>-</button>
+                        <span>1</span>
+                        <button type="button" disabled>+</button>
+                    </div>
+
+                    <div class="cart-item__meta">
+                        <button class="cart-item__delete" type="button" data-cart-delete aria-label="Delete product">
+                            <img src="icon/icon--remove.svg" alt="">
+                        </button>
+
+                        <p class="cart-item__subtotal" data-cart-item-subtotal></p>
+                    </div>
                 </div>
             </div>
-
-            <div class="cart-item__actions">
-                <div class="cart-item__quantity" aria-label="Quantity">
-                    <button type="button" disabled>-</button>
-                    <span>1</span>
-                    <button type="button" disabled>+</button>
-                </div>
-
-                <button class="cart-item__delete" type="button" data-cart-delete aria-label="Delete product">
-                    <img src="icon/icon--remove.svg" alt="">
-                </button>
-            </div>
-
-            <p class="cart-item__subtotal" data-cart-item-subtotal></p>
         </article>
     </template>
 </body>
