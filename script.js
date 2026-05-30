@@ -363,7 +363,7 @@ const initializeProductPage = () => {
     initializeProductGalleryControls();
 };
 
-const formatCurrency = (value) => `A$${value.toFixed(2)}`;
+const formatCurrency = (value) => `$${value.toFixed(2)} AUD`;
 
 const initializeResultsPage = () => {
     const resultsPage = document.querySelector("[data-results-page]");

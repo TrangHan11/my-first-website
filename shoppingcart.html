@@ -101,12 +101,6 @@
                 </div>
             </nav>
 
-            <div class="cart-table__head" aria-hidden="true">
-                <span>Product</span>
-                <span>Quantity</span>
-                <span>Subtotal</span>
-            </div>
-
             <div class="cart-items" data-cart-items></div>
 
             <a class="cart-page__continue" href="results.html">&larr; Continue shopping</a>
@@ -114,7 +108,7 @@
             <section class="cart-summary">
                 <div class="cart-summary__total-row">
                     <span>Total</span>
-                    <strong data-cart-total>A$0.00</strong>
+                    <strong data-cart-total>$0.00 AUD</strong>
                 </div>
                 <p class="cart-summary__note">Tax included. Delivery calculated at check out.</p>
                 <textarea class="cart-summary__instructions" rows="2" placeholder="Special instructions for the seller"></textarea>
@@ -167,14 +161,30 @@
         </section>
     </main>
 
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <nav class="site-footer__nav" aria-label="Footer navigation">
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="policy.html">Policy</a>
+            </nav>
+
+            <p class="site-footer__copy">&copy; 2026 Lovey Patisserie Cafe. All rights reserved.</p>
+        </div>
+    </footer>
+
     <template id="cart-item-template">
         <article class="cart-item" data-cart-item>
             <img class="cart-item__image" src="" alt="" data-cart-item-image>
 
-            <div class="cart-item__content">
+            <div class="cart-item__info">
                 <h2 class="cart-item__name" data-cart-item-name></h2>
                 <p class="cart-item__price" data-cart-item-price></p>
                 <p class="cart-item__size" data-cart-item-size></p>
+            </div>
+
+            <div class="cart-item__aside">
+                <p class="cart-item__subtotal" data-cart-item-subtotal></p>
 
                 <div class="cart-item__actions">
                     <div class="cart-item__quantity" aria-label="Quantity">
@@ -183,13 +193,9 @@
                         <button type="button" disabled>+</button>
                     </div>
 
-                    <div class="cart-item__meta">
-                        <button class="cart-item__delete" type="button" data-cart-delete aria-label="Delete product">
-                            <img src="icon/icon--remove.svg" alt="">
-                        </button>
-
-                        <p class="cart-item__subtotal" data-cart-item-subtotal></p>
-                    </div>
+                    <button class="cart-item__delete" type="button" data-cart-delete aria-label="Delete product">
+                        <img src="icon/icon--remove.svg" alt="">
+                    </button>
                 </div>
             </div>
         </article>
