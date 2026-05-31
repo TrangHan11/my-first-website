@@ -2272,7 +2272,7 @@ body {
 }
 
 .checkout-card--delivery h2 {
-    color: #a55a34;
+    color: rgba(210, 12, 12, 0.8);
 }
 
 .checkout-card > p,
@@ -2776,7 +2776,7 @@ body {
 }
 
 .checkout-summary__row--total strong {
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-size: 22px;
 }
 
