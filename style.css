@@ -1837,6 +1837,7 @@ body {
     align-items: center;
     justify-content: center;
     width: auto;
+    margin: 28px 0 0 10%;
     padding: 0 10px;
     border: 1px solid #0A5201;
     border-radius: 8px;
@@ -1850,7 +1851,10 @@ body {
 }
 
 .cart-page__continue--center {
-    margin-top: 26px;
+    display: inline-flex;
+    width: auto;
+    margin: 26px auto 0;
+    justify-content: center;
 }
 
 .cart-summary {
@@ -2067,12 +2071,18 @@ body {
     }
 
     .cart-page__continue {
-        display: inline-flex;
-        justify-content: center;
         width: auto;
-        margin: 18px 0 0;
+        margin: 14px 0 0;
         padding: 0 12px;
         font-size: 16px;
+        justify-content: center;
+    }
+
+    .cart-page__continue--center {
+        display: inline-flex;
+        width: auto;
+        margin: 14px auto 0;
+        justify-content: center;
     }
 
     .cart-summary {
