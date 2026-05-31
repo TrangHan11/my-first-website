@@ -848,7 +848,7 @@ body {
 
 .results-card__price {
     margin: 8px 0 0;
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-family: Suranna;
     font-size: 24px;
     line-height: 1;
@@ -1076,7 +1076,7 @@ body {
 
 .product-page__price {
     margin: 14px 0 0;
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-size: 25px;
     line-height: 1;
     font-family: Suranna;
@@ -1097,7 +1097,7 @@ body {
     border: 1px solid #6f664f;
     border-radius: 10px;
     background: #fbf4d0;
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-size: 18px;
     font-family: Noto serif;
 }
@@ -1680,7 +1680,7 @@ body {
 }
 
 .cart-item__subtotal {
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     text-align: right;
     font-size: 16px;
     font-family: Noto serif;
@@ -1864,13 +1864,13 @@ body {
     justify-content: center;
     align-items: baseline;
     gap: 40px;
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-size: 24px;
     font-family: Noto serif;
 }
 
 .cart-summary__total-row strong {
-    color: #9d3722;
+    color: rgba(210, 12, 12, 0.8);
     font-weight: 700;
 }
 
